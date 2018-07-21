@@ -1,13 +1,28 @@
+/* Reset */
 *,
 html {
   padding: 0;
   margin: 0;
 }
 
+/* Imports */
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif');
+
+/* Variables */
+:root {
+  --dark-color: #2f3944;
+  --light-text: #a5a9ad;
+}
+
+/* Global styles */
+body {
+  font-family: 'IBM Plex Serif', serif;
+}
+
 /* Main title bar style */
 
 nav {
-  background-color: #2f3944;
+  background-color: var(--dark-color);
   padding: 1.5rem;
   display: flex;
 }
@@ -17,4 +32,28 @@ nav {
   color: #fff;
   text-transform: uppercase;
   font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Header styles */
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 10% 2.5%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  border-bottom: 4px solid var(--dark-color);
+}
+
+.subtitle {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.125rem;
+  color: var(--light-text);
 }
