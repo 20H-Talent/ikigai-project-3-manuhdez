@@ -16,6 +16,7 @@ html {
   --accent-color: #4c6988;
   --succes-color: #69b9b4;
   --light-text: #a5a9ad;
+  --label-desktop-text: #4c5d6e;
 }
 
 /* Main title bar style */
@@ -31,7 +32,7 @@ nav {
   color: #fff;
   text-transform: uppercase;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 /* Header styles */
@@ -70,15 +71,36 @@ form {
   flex-direction: column;
 }
 
-.sub-form {
+.sub-form:first-child {
   margin-bottom: 25px;
+}
+
+.check-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 25px 0 15px 0;
+  width: 100%;
+}
+
+.flex-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.flex-checkbox {
+  display: flex;
+  align-items: center;
+  height: 40px;
 }
 
 label {
   color: var(--light-text);
 }
 
-input,
+input[type="text"],
+input[type="number"],
+input[type="email"],
 select,
 textarea {
   background-color: var(--light-color);
@@ -89,8 +111,13 @@ textarea {
   outline-color: var(--accent-color);
   outline-width: 2px;
   padding: 5px 15px;
+  box-sizing: border-box;
   font-size: 1rem;
   color: var(--dark-color);
+}
+
+#zip_code {
+  width: 50%;
 }
 
 textarea {
@@ -99,9 +126,18 @@ textarea {
   resize: none;
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+  height: 18px;
+  width: 18px;
+  margin-right: 15px;
+  background: var(--light-color);
+  border: none;
+}
+
 hr {
   height: 2px;
-  margin: 30px 0;
+  margin: 15px 0 30px 0;
   background-color: var(--dark-color);
   border: none;
 }
@@ -113,6 +149,7 @@ button {
   font-weight: 500;
   padding: 1.25rem;
   border-radius: 4px;
+  margin-top: 30px;
 }
 
 /* Footer style */
@@ -123,4 +160,40 @@ footer {
   font-style: italic;
   margin-top: 15px;
   padding-bottom: 100px;
+}
+
+/**************  Media queries  **************/
+
+@media (min-width: 760px) {
+  .flex-input {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  input,
+  select,
+  option {
+    margin: 0;
+    width: 80%;
+    box-sizing: border-box;
+  }
+
+  label {
+    width: 20%;
+    color: var(--label-desktop-text);
+  }
+
+  #zip_code {
+    width: 30%;
+  }
+
+  .zip_container {
+    justify-content: flex-start;
+  }
+
+  hr {
+    margin: 45px 0 60px 0;
+  }
 }
