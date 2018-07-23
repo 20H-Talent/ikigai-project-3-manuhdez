@@ -216,6 +216,15 @@ footer {
 /**************  Media queries  **************/
 
 @media (min-width: 760px) {
+
+  header {
+    width: 60%;
+  }
+
+  form {
+    width: 60%;
+  }
+
   .flex-input {
     flex-direction: row;
     justify-content: space-between;
