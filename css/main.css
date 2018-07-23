@@ -240,7 +240,7 @@ footer {
     box-sizing: border-box;
   }
 
-  label {
+  .flex-input label {
     width: 20%;
     color: var(--label-desktop-text);
   }
